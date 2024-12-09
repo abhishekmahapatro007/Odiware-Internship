@@ -1,0 +1,17 @@
+PS C:\Users\LENOVO> SET-EXECUTIONPOLICY REMOTESIGNED
+Sets the PowerShell execution policy to allow running signed and local scripts.
+
+PS C:\Users\LENOVO> Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+Sets the execution policy to RemoteSigned for the current user.
+
+PS C:\Users\LENOVO> cd C:\Users\LENOVO\odoo
+Changes the directory to the odoo folder.
+
+PS C:\Users\LENOVO\odoo> .\.venv\Scripts\activate
+Activates the Python virtual environment located in .venv.
+
+(.venv) PS C:\Users\LENOVO\odoo> $env:ODIWARE_SERVER_ADDR="http://77.37.45.92:8069"
+Sets an environment variable ODIWARE_SERVER_ADDR with the specified server address.
+
+(.venv) PS C:\Users\LENOVO\odoo> python odoo-bin
+Starts the Odoo server using the odoo-bin script.

@@ -1,0 +1,2 @@
+Week 1:-Worked on setting up odoo and running virtual env,worked on hr module and practised on both community 
+and enterprise build of odoo.

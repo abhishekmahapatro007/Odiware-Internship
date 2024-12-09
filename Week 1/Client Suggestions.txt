@@ -1,0 +1,90 @@
+https://runbot.odoo.com/ (test build)
+
+refer to the HR module(https://www.odoo.com/slides/human-resources-32)
+
+Use admin as username and password to login and try relatively older builds if latest build ain't working
+
+Odoo Community Modules:
+
+Discuss
+Calendar
+To-do
+Members
+Contacts
+CRM
+Sales
+Dashboards
+Point of Sale
+Invoicing
+Project
+Timesheets
+Website
+eLearning
+Email Marketing
+SMS Marketing
+Events
+Surveys
+Purchase
+Inventory
+Manufacturing
+Maintenance
+Repairs
+Employees
+Attendances
+Recruitment
+Fleet
+Time Off
+Expenses
+Lunch
+Live Chat
+Data Cleaning
+Apps
+Settings
+Tests
+Odoo Enterprise Modules (Includes everything from Community, plus these):
+
+Knowledge
+Meeting Rooms
+Frontdesk
+Appointments
+Subscriptions
+Rental
+Kitchen Display
+Accounting
+Documents
+Field Service
+Planning
+Helpdesk
+Social Marketing
+Marketing Automation
+Quality
+Barcode
+PLM
+Consolidation
+Sign
+Payroll
+Appraisals
+Referrals
+Approvals
+Whatsapp
+IoT
+Apps
+Settings
+Tests
+Payroll
+Appraisals
+Attendances
+Recruitment
+Referrals
+Fleet
+Time off
+Expenses
+Lunch
+Live Chat
+Data cleaning 
+Approvals
+Whatsapp
+IoT
+Apps
+Settings
+Tests

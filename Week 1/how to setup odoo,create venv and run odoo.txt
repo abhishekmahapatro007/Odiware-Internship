@@ -1,0 +1,16 @@
+https://www.odoo.com/documentation/18.0/administration/on_premise/source.html
+Open postgres connect to server,degrade python to 3.10 and run cmd as admin
+
+//go to the location where odoo is installed from the repo
+C:\Windows\system32>cd C:\Users\LENOVO\odoo
+
+C:\Users\LENOVO\odoo>
+
+C:\Users\LENOVO\odoo>python -m venv .venv   //used only for first time
+
+C:\Users\LENOVO\odoo>
+
+C:\Users\LENOVO\odoo>.\.venv\Scripts\activate
+
+(.venv) C:\Users\LENOVO\odoo>python odoo-bin
+if u get registry loaded as the end log,odoo run successfully

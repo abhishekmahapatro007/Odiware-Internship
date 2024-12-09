@@ -1,0 +1,15 @@
+Appraisals not included in modules list
+cant find referrals
+
+Go to the Apps menu.
+In the search bar, type Appraisals.
+If the module is listed, click Install.
+
+Employees module
+Refer to manage skills and resume 
+personal documents not appearing
+Appraisal reviewer and send appraisals form to fields not appearing
+//use enterprise version insted of community version for all the above issues
+
+Recruiment module:link of interview from that of original interview link
+//sign in brevo and create a free acc but not recommended as your credentials will be public

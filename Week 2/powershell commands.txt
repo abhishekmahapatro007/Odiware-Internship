@@ -1,0 +1,91 @@
+4b99a39ce736a0e5a7a3621efc111c36
+
+PS C:\Users\LENOVO> SET-EXECUTIONPOLICY REMOTESIGNED
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies
+help topic at https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+SET-EXECUTIONPOLICY : Access to the registry key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PowerShell\1\ShellIds\Microsoft.PowerShell' is denied. To change the execution policy for the
+default (LocalMachine) scope, start Windows PowerShell with the "Run as administrator" option. To change the execution policy for the current user, run "Set-ExecutionPolicy -Scope
+CurrentUser".
+At line:1 char:1
++ SET-EXECUTIONPOLICY REMOTESIGNED
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (:) [Set-ExecutionPolicy], UnauthorizedAccessException
+    + FullyQualifiedErrorId : System.UnauthorizedAccessException,Microsoft.PowerShell.Commands.SetExecutionPolicyCommand
+PS C:\Users\LENOVO> Set-ExecutionPolicy -Scope CurrentUser
+
+cmdlet Set-ExecutionPolicy at command pipeline position 1
+Supply values for the following parameters:
+ExecutionPolicy:
+PS C:\Users\LENOVO> Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+Execution Policy Change
+The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose you to the security risks described in the about_Execution_Policies
+help topic at https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): Y
+PS C:\Users\LENOVO> cd C:\Users\LENOVO\odoo
+PS C:\Users\LENOVO\odoo> .\.venv\Scripts\activate
+>>
+>>
+(.venv) PS C:\Users\LENOVO\odoo> $env:ODIWARE_SERVER_ADDR=http://77.37.45.92:8069
+http://77.37.45.92:8069 : The term 'http://77.37.45.92:8069' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a
+path was included, verify that the path is correct and try again.
+At line:1 char:26
++ $env:ODIWARE_SERVER_ADDR=http://77.37.45.92:8069
++                          ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (http://77.37.45.92:8069:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+(.venv) PS C:\Users\LENOVO\odoo> $env:ODIWARE_SERVER_ADDR="http://77.37.45.92:8069"
+(.venv) PS C:\Users\LENOVO\odoo> $env:ODIWARE_SERVER_ADDR=
+>> ^C
+(.venv) PS C:\Users\LENOVO\odoo> $env:ODIWARE_SERVER_ADDR
+http://77.37.45.92:8069
+(.venv) PS C:\Users\LENOVO\odoo> python odoo-bin
+2024-12-09 07:46:06,649 5548 INFO ? odoo: Odoo version 17.0
+2024-12-09 07:46:06,649 5548 INFO ? odoo: Using configuration file at C:\Users\LENOVO\odoo\odoo.conf
+2024-12-09 07:46:06,651 5548 INFO ? odoo: addons paths: ['C:\\Users\\LENOVO\\odoo\\odoo\\addons', 'c:\\users\\pc\\appdata\\local\\openerp s.a\\odoo\\addons\\17.0', 'c:\\users\\lenovo\\odoo\\addons', 'c:\\users\\lenovo\\odoo_modules', 'c:\\users\\lenovo\\odoo\\odoo\\addons']
+2024-12-09 07:46:06,661 5548 INFO ? odoo: database: odoo@default:5433
+2024-12-09 07:46:06,980 5548 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports.
+2024-12-09 07:46:07,362 5548 INFO ? odoo.service.server: HTTP service (werkzeug) running on DESKTOP-OR04GLF:8069
+2024-12-09 07:46:07,442 5548 INFO odoo-db odoo.modules.loading: loading 1 modules...
+2024-12-09 07:46:07,453 5548 INFO odoo-db odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra)
+2024-12-09 07:46:07,547 5548 INFO odoo-db odoo.modules.loading: loading 49 modules...
+2024-12-09 07:46:07,574 5548 WARNING odoo-db odoo.addons.attachment_indexation.models.ir_attachment: Attachment indexation of PDF documents is unavailable because the 'pdfminer' Python library cannot be found on the system. You may install it from https://pypi.org/project/pdfminer.six/ (e.g. `pip3 install pdfminer.six`)
+2024-12-09 07:46:08,420 5548 WARNING odoo-db odoo.models: The model company.name has no _description
+2024-12-09 07:46:08,458 5548 INFO odoo-db odoo.modules.loading: 49 modules loaded in 0.91s, 0 queries (+0 extra)
+2024-12-09 07:46:08,622 5548 INFO odoo-db odoo.modules.loading: Modules loaded.
+2024-12-09 07:46:08,634 5548 INFO odoo-db odoo.modules.registry: Registry loaded in 1.278s
+2024-12-09 07:46:24,599 5548 INFO odoo-db odoo.addons.base.models.ir_http: Generating routing map for key None
+2024-12-09 07:47:56,036 5548 INFO odoo-db werkzeug: 127.0.0.1 - - [09/Dec/2024 07:47:56] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.005 0.008
+2024-12-09 07:48:29,702 5548 INFO odoo-db werkzeug: 127.0.0.1 - - [09/Dec/2024 07:48:29] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.005 0.114
+2024-12-09 07:49:06,521 5548 INFO odoo-db werkzeug: 127.0.0.1 - - [09/Dec/2024 07:49:06] "GET / HTTP/1.1" 303 - 2 0.007 0.007
+2024-12-09 07:49:31,413 5548 INFO odoo-db werkzeug: 127.0.0.1 - - [09/Dec/2024 07:49:31] "GET / HTTP/1.1" 303 - 2 0.011 0.262
+2024-12-09 07:49:42,037 5548 INFO odoo-db werkzeug: 127.0.0.1 - - [09/Dec/2024 07:49:42] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.006
+2024-12-09 07:49:57,637 5548 INFO odoo-db odoo.service.server: Initiating shutdown
+2024-12-09 07:49:57,637 5548 INFO odoo-db odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown.
+2024-12-09 07:49:58,686 5548 INFO odoo-db odoo.sql_db: ConnectionPool(used=0/count=0/max=64): Closed 7 connections
+Exception in thread odoo.service.cron.cron0:
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+Exception in thread odoo.service.cron.cron1:
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python310\lib\threading.py", line 1009, in _bootstrap_inner
+    self.run()
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self.run()
+  File "C:\Users\LENOVO\AppData\Local\Programs\Python\Python310\lib\threading.py", line 946, in run
+    self._target(*self._args, **self._kwargs)
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\LENOVO\odoo\odoo\service\server.py", line 508, in target
+    self.cron_thread(i)
+  File "C:\Users\LENOVO\odoo\odoo\service\server.py", line 508, in target
+  File "C:\Users\LENOVO\odoo\odoo\service\server.py", line 480, in cron_thread
+    self.cron_thread(i)
+  File "C:\Users\LENOVO\odoo\odoo\service\server.py", line 480, in cron_thread
+    pg_conn.poll()
+    pg_conn.poll()
+psycopg2.InterfaceError: connection already closed
+psycopg2.InterfaceError: connection already closed
