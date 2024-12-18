@@ -163,6 +163,12 @@ Run the appropriate activation command:
 ```ini
 .venv\Scripts\activate
 ```
+
+### Step 3: Run Odoo
+Run the appropriate activation command:
+```ini
+python odoo-bin
+```
 ---
 
 ## Resources
