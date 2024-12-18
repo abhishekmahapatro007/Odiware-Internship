@@ -1,0 +1,1 @@
+odoo custom modules use python as backend and xml for frontend,uses templating
