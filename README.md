@@ -43,9 +43,9 @@ For more detailed information, please refer to the [official Odoo documentation]
 
 ### Step 1: Clone the Odoo Repository
 Run the following command in your terminal:
-ini
+```ini
 git clone https://github.com/odoo/odoo.git --branch 17.0 --single-branch --depth 1
-
+```
 
 ### Step 2: Download Git
 Ensure Git is installed on your system before proceeding.
@@ -66,7 +66,7 @@ Move the Odoo folder into your `Documents` directory.
 1. Inside the Odoo folder, create a text document named `odoo.conf`.
 2. Rename `odoo.conf.text` to `odoo.conf`.
 3. Add the following configuration to the `odoo.conf` file:
-ini
+```ini
 [options]
 addons_path = ./addons
 admin_passwd = admin
@@ -134,7 +134,7 @@ websocket_rate_limit_delay = 0.2
 without_demo = False
 workers = None
 x_sendfile = False
-
+```
 
 ---
 
@@ -152,15 +152,15 @@ Type cmd in the path bar and open command prompt,then use code . to open vs code
 1. Open the Odoo directory.
 2. Right-click and open the terminal in this directory as admin.
 3. Run the following command:
-ini
+```ini
 py -m venv .venv
-
+```
 (if running for the first time,else skip it)
 
 
 ### Step 2: Activate Virtual Environment
 Run the appropriate activation command:
-ini
+```ini
 .venv\Scripts\activate
 ```
 ---
