@@ -1,2 +1,9 @@
 Week 1:-Worked on setting up odoo and running virtual env,worked on hr module and practised on both community 
 and enterprise build of odoo.
+
+Week 2:-Started CRM Module and tested custom module on my machine.Learnt how to use custom module on client pc using powershell 
+commands.
+
+Week 3:-Completed Purchase Module,made yt promotions vid and started Inventory Module.
+
+week 4:-
