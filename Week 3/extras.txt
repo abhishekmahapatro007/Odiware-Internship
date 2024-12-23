@@ -1,0 +1,3 @@
+odoo custom modules use python as backend and xml for frontend,uses templating
+
+JavaScript templates take simple web apps to the next level, keeping your application logic separate from your presentation and your HTML and JS files clean. This course provides a look at popular JavaScript template solutions for modern web apps that consume and display data. Joe Marini reviews four popular templating libraries: JQuery Template, a simple solution that plugs straight into jQuery; Handlebars and Mustache, which provide greater flexibility; and Dust, the templating engine for more complex scenarios.
