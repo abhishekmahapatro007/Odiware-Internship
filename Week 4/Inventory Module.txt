@@ -1,1 +1,3 @@
 Inventory>Operations>Physical Inventory to open Inventory Adjustments
+
+Reordering rules only available for storable products only and not for consumables
