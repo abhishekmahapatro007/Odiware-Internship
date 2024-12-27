@@ -1,0 +1,2 @@
+Once a quotation is confirmed, Odoo locks certain fields to prevent modifications that could affect the integrity of the sales order or invoices. 
+If the quotation is confirmed, you cannot directly change the quantities of the products.
