@@ -26,3 +26,15 @@ the correct location), the status may not change to Ready.
 Solution: Ensure that there is available stock in the warehouse that can be reserved for the delivery order. If the stock is 
 not available or is in a different location, you might need to move it or adjust your inventory to reflect the correct stock 
 levels.
+
+1. FIFO (First In, First Out)
+Definition: Products that are received first are the first ones to be sold or used.
+2. LIFO (Last In, First Out)
+Definition: The most recently received products are the first ones to be sold or used.
+3. CL (Continuous Loop)
+Definition: A strategy where inventory is continuously rotated and managed without interruption, ensuring the flow of goods 
+is always active.
+4. FEFO (First Expired, First Out)
+Definition: Products with the earliest expiration date are sold or used first.
+5. Package-Based Removal
+Definition: Inventory is removed or distributed based on pre-packaged units, rather than individual product quantities.
