@@ -3,3 +3,6 @@ Inventory>Operations>Physical Inventory to open Inventory Adjustments
 Reordering rules only available for storable products only and not for consumables
 
 Warehouse transfers/picking methods(https://www.odoo.com/slides/slide/picking-methods-661?fullscreen=1) visit again
+
+Configuration>Operation types>Delivery Orders>Reservation Methods(manual-> recommended for small businessess and At confirmation
+for large businesses)
