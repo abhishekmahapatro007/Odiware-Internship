@@ -42,3 +42,6 @@ is always active.
 Products with the earliest expiration date are sold or used first.
 5. Package-Based Removal
 Inventory is removed or distributed based on pre-packaged units, rather than individual product quantities.
+
+Consumable products don't have traceability
+
