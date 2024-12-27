@@ -4,7 +4,11 @@ Reordering rules only available for storable products only and not for consumabl
 
 Warehouse transfers/picking methods(https://www.odoo.com/slides/slide/picking-methods-661?fullscreen=1) visit again
 
-Configuration>Operation types>Delivery Orders>Reservation Methods(manual-> recommended for small businessess and At confirmation
+Lot numbers are used to track items throughout the manufacturing process and can be used to identify recalled items or 
+products with defects.
+
+Configuration>Operation types>Delivery Orders>Reservation Methods(manual-> recommended for small businessess and At 
+confirmation
 for large businesses)
 
 **Why doesn't the status change to "Ready" when I click "Check Availability" on a delivery order in the Inventory module 
