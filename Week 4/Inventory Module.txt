@@ -6,3 +6,23 @@ Warehouse transfers/picking methods(https://www.odoo.com/slides/slide/picking-me
 
 Configuration>Operation types>Delivery Orders>Reservation Methods(manual-> recommended for small businessess and At confirmation
 for large businesses)
+
+**Why doesn't the status change to "Ready" when I click "Check Availability" on a delivery order in the Inventory module 
+when it's in the "Waiting" state?
+Additionally, if the status is set to "Ready" and I change it to "Waiting" after clicking "Unreserve," why does it not 
+return to "Ready" after I click "Check Availability" again?**
+
+1. Product Stock Levels
+Reason: The "Check Availability" button checks if sufficient stock is available to fulfill the delivery order. If there is 
+not enough stock available in your warehouse, the system will not change the status to Ready.
+Solution: Ensure that you have enough stock available in the correct warehouse or location for the product. You can check 
+this by going to the Inventory module and verifying stock levels for the product. If needed, you may have to receive more 
+stock (via Purchase Orders) or transfer stock to the correct location.
+
+2. Unreserved Products Not Ready for Delivery
+Reason: When you click Unreserve on a delivery order, it "unassigns" the stock that was previously allocated to the order. 
+The Check Availability button will attempt to reallocate stock, but if there is no stock available in the warehouse (or in 
+the correct location), the status may not change to Ready.
+Solution: Ensure that there is available stock in the warehouse that can be reserved for the delivery order. If the stock is 
+not available or is in a different location, you might need to move it or adjust your inventory to reflect the correct stock 
+levels.
