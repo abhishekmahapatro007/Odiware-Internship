@@ -13,3 +13,5 @@ Check if the lot number has already been reserved, delivered, or used in any sto
 directly.
 To change the lot number, you'll need to reverse any stock movements related to that product and lot number. For example, you 
 may need to un-assign the product or reset the stock moves.
+
+New quotation > Confirm the quotation > Delivery Smart button>Detailed Operations Smart button > Assign the lot number
