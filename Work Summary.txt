@@ -6,4 +6,6 @@ commands,yt quotations video.
 
 Week 3:-Completed Purchase Module,made yt promotions vid and started Inventory Module.
 
-week 4:-
+Week 4:-Completed Inventory Module and some additional Sales Module operations(included in Inventory Module)
+
+Week 5:-Started MRP-Manufacturing & Shop Floor Module
