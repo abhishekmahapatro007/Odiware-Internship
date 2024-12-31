@@ -1,0 +1,9 @@
+Inventory>Overview>Pick to start operations
+
+Products>Packages to Access Clusters(enable packages in settings
+
+Cluster picking(Send goods in output and then deliver (2 steps))/ANY )
+
+Wave picking(Receive goods directly (1 step),Pack goods, send goods in output and then deliver (3 steps))
+
+Operations>Wave transfers to Access Wave Transfers

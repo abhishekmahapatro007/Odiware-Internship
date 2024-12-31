@@ -1,0 +1,11 @@
+OEE(Overall Equipment Effectiveness)
+If it's Green,it indicates that work centers are meeting their target.
+If Red,if OEE drops below the target.
+
+BoM(Bill of Materials)
+
+MO(Manufacturing Order)
+
+In Odoo, work centers are used to carry out manufacturing operations at specific locations. 
+However, if a work center cannot be used for some reason, work orders begin to pile up at 
+the work center until it is operational again.
