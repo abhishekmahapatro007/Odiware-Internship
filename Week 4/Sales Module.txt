@@ -1,0 +1,17 @@
+Once a quotation is confirmed, Odoo locks certain fields to prevent modifications that could affect the integrity of the sales order or invoices. 
+If the quotation is confirmed, you cannot directly change the quantities of the products.
+
+Sales Module>desired products>Update quantity at top>change lot number
+
+Reason: Once a product is assigned a lot number in Odoo (typically in the Inventory module), that lot number is associated with
+the specific quant (quantity) in the system. A quant represents a specific quantity of a product in stock, and it is tied to a 
+lot number when tracking is enabled. If that product has already been reserved, shipped, or used in any transactions (like in a 
+sales order, delivery, or stock move), the system will lock the lot number and prevent it from being edited or changed.
+
+Solution:
+Check if the lot number has already been reserved, delivered, or used in any stock transactions. If so, you cannot change it 
+directly.
+To change the lot number, you'll need to reverse any stock movements related to that product and lot number. For example, you 
+may need to un-assign the product or reset the stock moves.
+
+New quotation > Confirm the quotation > Delivery Smart button>Detailed Operations Smart button > Assign the lot number

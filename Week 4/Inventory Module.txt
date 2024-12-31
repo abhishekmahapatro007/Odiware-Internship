@@ -1,1 +1,47 @@
 Inventory>Operations>Physical Inventory to open Inventory Adjustments
+
+Reordering rules only available for storable products only and not for consumables
+
+Warehouse transfers/picking methods(https://www.odoo.com/slides/slide/picking-methods-661?fullscreen=1) visit again
+
+Lot numbers are used to track items throughout the manufacturing process and can be used to identify recalled items or 
+products with defects.
+
+Configuration>Operation types>Delivery Orders>Reservation Methods(manual-> recommended for small businessess and At 
+confirmation
+for large businesses)
+
+**Why doesn't the status change to "Ready" when I click "Check Availability" on a delivery order in the Inventory module 
+when it's in the "Waiting" state?
+Additionally, if the status is set to "Ready" and I change it to "Waiting" after clicking "Unreserve," why does it not 
+return to "Ready" after I click "Check Availability" again?**
+
+1. Product Stock Levels
+Reason: The "Check Availability" button checks if sufficient stock is available to fulfill the delivery order. If there is 
+not enough stock available in your warehouse, the system will not change the status to Ready.
+Solution: Ensure that you have enough stock available in the correct warehouse or location for the product. You can check 
+this by going to the Inventory module and verifying stock levels for the product. If needed, you may have to receive more 
+stock (via Purchase Orders) or transfer stock to the correct location.
+
+2. Unreserved Products Not Ready for Delivery
+Reason: When you click Unreserve on a delivery order, it "unassigns" the stock that was previously allocated to the order. 
+The Check Availability button will attempt to reallocate stock, but if there is no stock available in the warehouse (or in 
+the correct location), the status may not change to Ready.
+Solution: Ensure that there is available stock in the warehouse that can be reserved for the delivery order. If the stock is 
+not available or is in a different location, you might need to move it or adjust your inventory to reflect the correct stock 
+levels.
+
+1. FIFO (First In, First Out)
+Products that are received first are the first ones to be sold or used.
+2. LIFO (Last In, First Out)
+The most recently received products are the first ones to be sold or used.
+3. CL (Continuous Loop)
+A strategy where inventory is continuously rotated and managed without interruption, ensuring the flow of goods 
+is always active.
+4. FEFO (First Expired, First Out)
+Products with the earliest expiration date are sold or used first.
+5. Package-Based Removal
+Inventory is removed or distributed based on pre-packaged units, rather than individual product quantities.
+
+Consumable products don't have traceability
+

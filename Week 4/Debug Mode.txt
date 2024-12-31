@@ -1,0 +1,5 @@
+.odoo.com/web?debug=1&reload=true#id=126&
+
+.odoo.com/web?reload=true#id=126&cids=1
+
+(refer the image bug_present_in_navbar to make sure debug mode is on)
