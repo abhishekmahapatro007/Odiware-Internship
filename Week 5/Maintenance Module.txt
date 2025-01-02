@@ -1,0 +1,3 @@
+Equipment>Work Centers to access the Work Centers
+
+Equipment>Machines and Tools to access the equipments
