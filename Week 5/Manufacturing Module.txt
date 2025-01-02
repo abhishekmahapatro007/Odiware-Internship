@@ -26,3 +26,7 @@ Can be accessed from Configuration>Work Centers
 Or
 Settings>Operations>Work Orders section> 
 ->Work Centers
+
+When using three-step manufacturing, during Picking,Manufacturing & Transferring steps Odoo allows you to 
+create backorders.(you can enable multi-step manufacturing by configuring the Warehouse directly in the Manufacturing 
+module in Odoo)
