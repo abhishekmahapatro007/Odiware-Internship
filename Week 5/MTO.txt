@@ -1,0 +1,7 @@
+In Odoo, Make-to-Order (MTO) is a route that triggers replenishment when a sales order is confirmed
+
+The Make-to-Order (MTO) route can be used for 
+Manufacturing, Buy, and Resupply Subcontractor only
+
+In order to activate the Make-to-Order (MTO) route, you must first 
+Go to Inventory > Configuration > Warehouses > Routes Smart Button > Archived filter > select MTO route > Unarchive
