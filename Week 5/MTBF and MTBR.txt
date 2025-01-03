@@ -1,0 +1,28 @@
+1. MTBF (Mean Time Between Failures)
+Definition:
+MTBF is the average time between consecutive failures of a system or piece of equipment during operation. It is typically used to measure the reliability of equipment, and it indicates how long a system can operate before it is expected to fail.
+
+Formula:
+
+MTBF = Total Operating Time/Number of Failures
+ 
+Total Operating Time: The total time the system has been running.
+Number of Failures: The number of failures that occurred during the total operating time.
+
+Usage:
+MTBF is used to assess the reliability of a piece of equipment and to predict when the next failure might happen. It’s typically used in preventive maintenance to schedule repairs or inspections to avoid unexpected downtime.
+
+2. MTBR (Mean Time Between Repairs)
+Definition:
+MTBR is the average time between two consecutive repair actions. This metric is focused on the time interval between the occurrence of a failure and the next repair.
+
+Formula:
+
+MTBR = Total Repair Time/Number of Repairs
+ 
+Total Repair Time: The cumulative time spent on repairs.
+Number of Repairs: The total number of repair events that took place during the given period.
+
+Usage:
+MTBR is useful for understanding the frequency and duration of repair events. It can help in determining how often equipment needs repairs and can guide decisions on whether repairs are becoming more frequent or if preventive actions are needed to reduce repairs.
+

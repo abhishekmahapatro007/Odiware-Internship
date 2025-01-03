@@ -2,10 +2,31 @@ OEE(Overall Equipment Effectiveness)
 If it's Green,it indicates that work centers are meeting their target.
 If Red,if OEE drops below the target.
 
-BoM(Bill of Materials)
-
 MO(Manufacturing Order)
 
 In Odoo, work centers are used to carry out manufacturing operations at specific locations. 
 However, if a work center cannot be used for some reason, work orders begin to pile up at 
 the work center until it is operational again.
+
+FedEx Shipping Methods
+Enable FedEx Connector under Shipping Connectors and click on 
+->FedEx Shipping Methods
+Or 
+Configuration>Shipping Methods(same if u clear the filter when using first)
+
+
+BoM(Bill of Materials) 
+Can be created directly from Products>Bill Of Materials
+Or
+Products>Products>Go to desired Product>Click on Bill of Materials from Top Middle
+Dropdown Menu and create "New"
+
+Work Centers 
+Can be accessed from Configuration>Work Centers
+Or
+Settings>Operations>Work Orders section> 
+->Work Centers
+
+When using three-step manufacturing, during Picking,Manufacturing & Transferring steps Odoo allows you to 
+create backorders.(you can enable multi-step manufacturing by configuring the Warehouse directly in the Manufacturing 
+module in Odoo)
