@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_applicant,access_hr_applicant,model_hr_applicant,base.group_user,1,1,1,1
-access_applicant_record_wizard,access_applicant_record_wizard,model_applicant_record_wizard,base.group_user,1,1,1,1

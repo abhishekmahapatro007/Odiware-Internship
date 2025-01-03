@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_odi_customer_credit,access_odi_customer_credit,model_odi_customer_credit,base.group_user,1,1,1,1
-access_odi_api_key,access_odi_api_key,model_odi_api_key,base.group_user,1,1,1,1
-access_odi_sub_plan,access_odi_sub_plan,model_odi_sub_plan,base.group_user,1,1,1,1
-access_sub_recharge_history,access_sub_recharge_history,model_sub_recharge_history,base.group_user,1,1,1,1
-access_odi_service_cost,access_odi_service_cost,model_odi_service_cost,base.group_user,1,1,1,1

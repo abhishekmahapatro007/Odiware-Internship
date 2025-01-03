@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_job,access_hr_job,model_hr_job,base.group_user,1,1,1,1
-access_linkedinjobs_jobqueue_wizard,access_linkedinjobs_jobqueue_wizard,model_linkedinjobs_jobqueue_wizard,base.group_user,1,1,1,1
-access_postjobfree_jobqueue_wizard_user,access_postjobfree_jobqueue_wizard_user,model_postjobfree_jobqueue_wizard,base.group_user,1,1,1,1

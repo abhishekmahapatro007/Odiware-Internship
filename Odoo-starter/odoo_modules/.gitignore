@@ -1,8 +1,0 @@
-.vscode/
-.idea/
-.history/
-*.*.pyc
-_pycache_/
-_pycache_/*
-*.pyc
-*/_pycache_/*
