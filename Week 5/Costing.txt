@@ -1,0 +1,4 @@
+Holy Trinity:-
+1)Standard Price
+2)Average Cost(AVCO)
+3)First In First Out(FIFO)
