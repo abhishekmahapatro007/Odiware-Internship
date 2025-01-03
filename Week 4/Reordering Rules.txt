@@ -1,11 +1,15 @@
-In Odoo, a Reordering Rule is used to automate the process of ordering products when inventory levels fall below a certain threshold, ensuring that stock is replenished in a timely manner. The 0, 0 reordering rule refers to the minimum and maximum quantity values in the reordering rule setup.
+In Odoo, a Reordering Rule is used to automate the process of ordering products when inventory levels fall below a certain 
+threshold, ensuring that stock is replenished in a timely manner. The 0, 0 reordering rule refers to the minimum and maximum 
+quantity values in the reordering rule setup.
 
 Here’s a breakdown:
 
 Reordering Rule in Odoo:
-Minimum Quantity: This is the stock level at which a new order will be triggered. When the stock reaches or falls below this minimum quantity, Odoo will create a procurement order (e.g., purchase order or manufacturing order) to restock the product.
+Minimum Quantity: This is the stock level at which a new order will be triggered. When the stock reaches or falls below this 
+minimum quantity, Odoo will create a procurement order (e.g., purchase order or manufacturing order) to restock the product.
 
-Maximum Quantity: This is the ideal stock level you want to maintain. Once the procurement is done, the system will ensure the stock level doesn't exceed this maximum quantity.
+Maximum Quantity: This is the ideal stock level you want to maintain. Once the procurement is done, the system will ensure 
+the stock level doesn't exceed this maximum quantity.
 
 0, 0 Reordering Rule:
 Minimum Quantity = 0
@@ -13,10 +17,13 @@ Maximum Quantity = 0
 When the reordering rule is set to 0, 0, it means:
 
 No reorder actions are triggered automatically, because both the minimum and maximum stock levels are set to zero.
-It effectively disables the automatic stock replenishment feature because there is no threshold defined for when the stock should be replenished.
+It effectively disables the automatic stock replenishment feature because there is no threshold defined for when the stock 
+should be replenished.
 Use Cases:
-A 0, 0 reordering rule might be used when you don’t want automatic reordering to take place and prefer to handle stock manually.
-It might also be used for certain products where replenishment doesn’t need to be automated or managed through standard reordering rules.
+A 0, 0 reordering rule might be used when you don’t want automatic reordering to take place and prefer to handle stock 
+manually.
+It might also be used for certain products where replenishment doesn’t need to be automated or managed through standard 
+reordering rules.
 Summary:
 0, 0 reordering rule means no automatic stock replenishment for the product.
 
