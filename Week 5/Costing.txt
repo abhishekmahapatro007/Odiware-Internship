@@ -1,7 +1,10 @@
 Holy Trinity:-
-1)Standard Price: The product is assigned a fixed cost that does not change, regardless of the actual purchase or production cost.
+1)Standard Price: The product is assigned a fixed cost that does not change, regardless of the actual purchase or production 
+cost.
 
-2)Average Cost (AVCO): The product cost is updated by taking the average of the costs of all units in stock, including newly purchased or produced units.
+2)Average Cost (AVCO): The product cost is updated by taking the average of the costs of all units in stock, including newly 
+purchased or produced units.
 
-3)First In First Out (FIFO): The first units received or produced are the first ones to be sold or used. The cost of the oldest inventory is used to calculate the product cost.
+3)First In First Out (FIFO): The first units received or produced are the first ones to be sold or used. The cost of the oldest 
+inventory is used to calculate the product cost.
 
