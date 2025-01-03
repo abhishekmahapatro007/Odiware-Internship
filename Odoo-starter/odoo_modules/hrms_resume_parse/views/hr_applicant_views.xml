@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="hr_applicant_form_view_name">
+            <field name="name">hr.applicant.form.view</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@class='oe_button_box']" position="inside">
+                    <button class="btn-primary" type="object" name="action_on_click_parse_resume"
+                        icon="fa-file-pdf-o" string="Populate from resume"/>
+<!--                    <button class="btn-primary" type="object" name="action_on_click_score_resume"-->
+<!--                        icon="fa-percent" string="Resume Score"/>-->
+                </xpath>
+
+<!--                <xpath expr="//field[@name='type_id']" position="after">-->
+<!--                    <field name="source_ids"/>-->
+<!--                    <field name="current_city_ids"/>-->
+<!--                    <field name="preferred_city_ids"/>-->
+<!--                </xpath>-->
+<!--                <xpath expr="//group[@name='recruitment_contract']" position="after">-->
+<!--                    <field name="is_scoring_triggered"/>-->
+<!--                    <group string="Resume Scores" invisible="is_scoring_triggered not in ('received')">-->
+<!--                        <field name="domain_match"/>-->
+<!--                        <field name="exp_match"/>-->
+<!--                        <field name="location_match"/>-->
+<!--                        <field name="role_match"/>-->
+<!--                        <field name="skill_match"/>-->
+<!--                        <field name="matching_score"/>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+
+        <record id="hr_applicant_tree_view_name" model="ir.ui.view">
+            <field name="name">hr.applicant.tree.inherit</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hrms_recruitment.hr_applicant_tree_view"/>
+            <field name="arch" type="xml">
+<!--                <xpath expr="//tree" position="inside">-->
+<!--                    <button name="action_on_click_add_from_resume_btn" string="Add from Resume" type="object" class="btn-primary" context="{'default_model': 'hr.applicant'}"/>-->
+<!--                </xpath>-->
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">button_in_applicant_tree</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

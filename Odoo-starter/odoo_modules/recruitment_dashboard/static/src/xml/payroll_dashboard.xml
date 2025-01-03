@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Payroll Dashboard View-->
+<templates id="template" xml:space="preserve">
+    <t t-name="recruitment_dashboard.PayrollDashboardMain" owl="1">
+         <div class="oh_dashboards">
+            <div class="container-fluid o_payroll_dashboard">
+                   <!-- <t t-call="EmployeeWarning"/> -->
+                <t t-call="EmployeeDetails"/>
+                <!-- <t t-if="this.state.is_manager == true">
+                    <t t-call="ManagerLeaveDashboard"/>
+                    <t t-call="PayrollManagerDashboard"/>
+                </t> -->
+            </div>
+        </div>
+    </t>
+    <!-- <t t-name="EmployeeWarning">
+       <div class="row" style="margin-top:1%;margin-left:40%;">
+            <div class="col-md-12 ">
+                <div>
+                    <div class="rounded mx-auto d-block">
+                        <div>
+                            <p style="color:red;">Error : Could not find employee linked to user</p>
+                            <p style="color:red;">Please contact system admin for the setup</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t> -->
+    <t t-name="EmployeeDetails">
+        <!-- <link rel="stylesheet"
+              href="/recruitment_dashboard/static/src/css/dashboard.css"/> -->
+        <div class="row main-section">
+            <div class="col-md-4 col-sm-6 oh-payroll">
+                <div class="oh-card" style="width: 288px;">
+                    <div class="oh-card-body"  t-on-click="hr_attendance">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#5bcbd0">
+                                <i class="fa fa-briefcase"/>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Active jobs</div>
+                                <div class="stat_count">
+                                    <t t-esc="this.state.login_employee.active_jobs_count"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 o_leave oh-payroll">
+                <div class="oh-card" style="width: 288px;">
+                    <div class="oh-card-body" t-on-click="leaves_to_approve">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#645bd0">
+                                <i class="fa fa-id-card-o"/>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Applicants</div>
+                                <div class="stat_count">
+                                    <t t-esc="this.state.login_employee.leave_requests"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 o_payslips oh-payroll">
+                <div class="oh-card" style="width: 288px;">
+                    <div class="oh-card-body"  t-on-click="payslips_click">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#6ba748">
+                                <i class="fa fa-users"/>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Submissions</div>
+                                <div class="stat_count">
+                                    <t t-esc="this.state.login_employee.submission_count"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 o_contracts oh-payroll">
+                <div class="oh-card" style="width: 288px;">
+                    <div class="oh-card-body" t-on-click="contracts_click">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#d05bb8">
+                                <i class="fa fa-user-plus"/>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Interviews</div>
+                                <div class="stat_count">
+                                    <t t-esc="this.state.login_employee.interview_count"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 o_salary_rules oh-payroll">
+                <div class="oh-card" style="width: 288px;">
+                    <div class="oh-card-body" t-on-click="salary_click">
+                        <div class="stat-widget-one">
+                            <div class="stat-icon" style="background:#d26600">
+                                <i class='fa fa-handshake-o'/>
+                            </div>
+                            <div class="stat-content">
+                                <div class="stat-head">Hires</div>
+                                <div class="stat_count">
+                                    <t t-esc="this.state.login_employee.hired_count"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+        <div class="col-md-12">
+                <div class="pipeline-view" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
+                    <div class="filters" style="margin-bottom: 8px; padding: 12px;">
+                        <h4 style="color: #003f83; padding-block: 0px; margin: 0; font-weight: 600;">Pipeline View</h4>
+                        <!-- <div class="filter-dropdowns"> -->
+                            <!-- <select id="user-filter" class="form-control" style="margin-right: 15px;"> -->
+                                <!-- <option value="all-users">All Users</option> -->
+                                <!-- Add more user options here -->
+                            <!-- </select> -->
+                            <!-- <select id="client-filter" class="form-control"> -->
+                                <!-- <option value="all-clients">All Clients</option> -->
+                            <!-- </select> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="color: #007bff; width: auto; text-align: left; font-weight: 600; font-size: 1.2rem;">Job Position</th>
+                                    <t t-foreach="this.state.login_employee.all_stages" t-as="stage_name" t-key="stage_name">
+                                        <th style="background-color: #007bff; color: white; width: max(10vw, 150px); border-radius: 25px;">
+                                            <span><t t-esc="stage_name"/></span>
+                                        </th>
+                                    </t>
+                                    <!-- <th style="background-color: #f0ad4e; color: white;">   New   </th>
+                                    <th style="background-color: #5bc0de; color: white;">Initial Qualification</th>
+                                    <th style="background-color: #ff851b; color: white;">First Interview</th>
+                                    <th style="background-color: #007bff; color: white;">Second Interview</th>
+                                    <th style="background-color: #d9534f; color: white;">Contract Proposal</th>
+                                    <th style="background-color: #5cb85c; color: white;">Contract Signed</th> -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <t t-foreach="this.state.login_employee.active_jobs_list" t-as="job" t-key="job.id">
+                                    <tr>
+                                        <td style="padding: 0; text-align: center; vertical-align: middle; text-align: left;">
+                                            <div style="margin-inline: 10px; display: grid; align-items: center; gap: 8px; grid-template-columns: 28px 1fr;">
+                                                <div style="height: 28px; background-color: #007bff; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                                    <i class="fa fa-briefcase" style="color: white; font-size: 14px;"/>
+                                                </div>
+                                                <div style="text-align: left; overflow: hidden;">
+                                                    <strong style="font-size: 1.1em; color: #333; display: block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+                                                        <t t-esc="job.name"/>
+                                                    </strong>
+                                                    <span style="color: #666; font-size: 1.0em;" t-if="job.company_name">
+                                                        <t t-esc="job.company_name"/>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <t t-foreach="this.state.login_employee.all_stages" t-as="stage_name" t-key="stage_name">
+                                            <t t-if="this.computeApplicantStageCount(job, stage_name) > 0">
+                                                <td style="padding: 0; padding-inline: 1rem;">
+                                                    <span class="value-box value-box-clickable" t-on-click="() => this.goToApplicants(job.id, stage_name)">
+                                                        <t t-esc="this.computeApplicantStageCount(job, stage_name)"/>
+                                                    </span>
+                                                </td>
+                                            </t>
+                                            <t t-else="">
+                                                <td style="padding: 0;"><span class="value-box"></span></td>
+                                            </t>
+                                        </t>
+                                        <!-- <t t-if="job.new_count > 0">
+                                            <td style="padding: 0; padding-inline: 2rem;">
+                                                <span t-attf-class="#{job.new_count > 0 ? 'value-box value-box-clickable' : ''}"  t-on-click="() => this.goToApplicants(job.id, 'New')">
+                                                    <t t-esc="job.new_count"/>
+                                                </span>
+                                            </td>
+                                        </t> 
+                                        <t t-else="">
+                                            <td style="padding: 0;"><span class="value-box"></span></td>
+                                        </t>
+                                        <t t-if="job.initial_qualification_count > 0">
+                                            <td style="padding: 0; padding-inline: 2rem;">
+                                                <span t-attf-class="#{job.initial_qualification_count > 0 ? 'value-box value-box-clickable' : ''}"  t-on-click="() => this.goToApplicants(job.id, 'Initial Qualification')">
+                                                    <t t-esc="job.initial_qualification_count"/>
+                                                </span>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="padding: 0;"><span class="value-box"></span></td>
+                                        </t>
+                                        <t t-if="job.first_interview_count > 0">
+                                            <td style="padding: 0; padding-inline: 2rem;">
+                                                <span t-attf-class="#{job.first_interview_count > 0 ? 'value-box value-box-clickable' : ''}"  t-on-click="() => this.goToApplicants(job.id, 'First Interview')">
+                                                    <t t-esc="job.first_interview_count"/>
+                                                </span>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="padding: 0;"><span class="value-box"></span></td>
+                                        </t>
+                                        <t t-if="job.second_interview_count > 0">
+                                            <td style="padding: 0; padding-inline: 2rem;">
+                                                <span t-attf-class="#{job.second_interview_count > 0 ? 'value-box value-box-clickable' : ''}"  t-on-click="() => this.goToApplicants(job.id, 'Second Interview')">
+                                                    <t t-esc="job.second_interview_count"/>
+                                                </span>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="padding: 0;"><span class="value-box"></span></td>
+                                        </t>
+                                        <t t-if="job.contract_proposal_count > 0">
+                                            <td style="padding: 0; padding-inline: 2rem;">
+                                                <span t-attf-class="#{job.contract_proposal_count > 0 ? 'value-box value-box-clickable' : ''}"  t-on-click="() => this.goToApplicants(job.id, 'Contract Proposal')">
+                                                    <t t-esc="job.contract_proposal_count"/>
+                                                </span>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="padding: 0;"><span class="value-box"></span></td>
+                                        </t>
+                                        <t t-if="job.contract_signed_count > 0">
+                                            <td style="padding: 0; padding-inline: 2rem;">
+                                                <span t-attf-class="#{job.contract_signed_count > 0 ? 'value-box value-box-clickable' : ''}"  t-on-click="() => this.goToApplicants(job.id, 'Contract Signed')">
+                                                    <t t-esc="job.contract_signed_count"/>
+                                                </span>
+                                            </td>
+                                        </t>
+                                        <t t-else="">
+                                            <td style="padding: 0;"><span class="value-box"></span></td>
+                                        </t> -->
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+        <div class="col-md-6">
+            <!-- Time to Fill Table -->
+            <div class="table-container" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #007bff; margin-bottom: 15px; font-size: 1.5em;">Time to Fill</h3>
+                <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-bordered table-striped" style="min-width: auto;">
+                        <thead style="background-color: #e0f7fa;">
+                            <tr>
+                                <th style="color: #00796b; padding: 8px;">Job Opening</th>
+                                <th style="color: #0288d1; padding: 8px;">Candidates per Position</th>
+                                <th style="color: #f57c00; padding: 8px;">Time to Fill (In Days)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="this.state.login_employee.active_job_opening" t-as="job" t-key="job.id">
+                                <tr>
+                                    <td style="padding: 10px; text-align: center;">
+                                        <span style="font-size: 20px; color: #28a745;">&#10003;</span>
+                                        <strong style="margin-left: 5px; font-size: 1.1em; color: #333;">
+                                            <t t-esc="job.name"/>
+                                        </strong>
+                                    </td>
+                                    <td style="padding: 10px; text-align: center; font-size: 1.2em;">
+                                        <t t-esc="job.no_of_recruitment"/>
+                                    </td>
+                                    <td style="padding: 10px; text-align: center; font-size: 1.2em;">
+                                        <t t-esc="job.time_to_fill"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+            <div class="col-md-6">
+        <!-- Time to Hire Table -->
+                <div class="table-container" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">
+                <h3 style="color: #007bff; margin-bottom: 15px; font-size: 1.5em;">Time to Hire</h3>
+                    <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-bordered table-striped" style="min-width: auto;">
+                        <thead style="background-color: #e0f7fa;">
+                            <tr>
+                                <th style="color: #00796b; padding: 8px;">Candidates</th>
+                                <th style="color: #0288d1; padding: 8px;">Job Opening</th>
+                                <th style="color: #f57c00; padding: 8px;">Time to Hire (in Days)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="this.state.login_employee.active_candidates" t-as="candidate"
+                               t-key="candidate.id">
+                                <tr>
+                                    <td style="padding: 10px; text-align: center;">
+                                        <span style="font-size: 18px; color: #28a745;">&#9679;</span>
+                                        <strong style="margin-left: 5px; font-size: 1.1em; color: #333;">
+                                            <t t-esc="candidate.name"/>
+                                        </strong>
+                                    </td>
+                                    <td style="padding: 10px; text-align: center; font-size: 1.1em;">
+                                        <t t-if="candidate.job_position">
+                                            <t t-esc="candidate.job_position"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span style="color: red">No Job Position given</span>
+                                        </t>
+                                    </td>
+                                    <td style="padding: 10px; text-align: center; font-size: 1.2em;">
+                                        <t t-esc="candidate.time_to_hire"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--        <div class="col-md-6">-->
+<!--            <div class="table-container" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px;">-->
+<!--                <h3 style="color: #007bff; margin-bottom: 15px; font-size: 1.5em;">Activity Log</h3>-->
+<!--                <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">-->
+<!--                    <table class="table table-bordered table-striped">-->
+<!--                        <thead style="background-color: #e0f7fa;">-->
+<!--                            <tr>-->
+
+<!--                            </tr>-->
+<!--                        </thead>-->
+<!--                        <tbody>-->
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <t t-name="PayrollChart">
+<!--            <div class="col-xs-12 col-sm-12 col-lg-12 col-md-12">-->
+            <!--                <div class="row" style="margin:0px;">-->
+            <!--                    <div class="col-md-6 monthly_expense_trend">-->
+            <!--                        <div class="card">-->
+            <!--                            <div class="card-header">-->
+            <!--                                <div class="card-title">-->
+            <!--                                    <b>-->
+            <!--                                        <h3 class="custom-h3">-->
+            <!--                                            Pipeline View-->
+            <!--                                        </h3>-->
+            <!--                                    </b>-->
+            <!--                                </div>-->
+            <!--                            </div>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </t>
+    </t>
+    <t t-name="ManagerLeaveDashboard">
+<!--        <div class="row" style="margin:0px;">-->
+        <!--            <div class="col-md-12 monthly_leave_graph_view">-->
+        <!--                <div class="card">-->
+        <!--                    <div class="card-header">-->
+        <!--                        <div class="card-title">-->
+        <!--                            <b>-->
+        <!--                                <h3 class="custom-h3">-->
+        <!--                                    Monthly Leave Analysis-->
+        <!--                                </h3>-->
+        <!--                            </b>-->
+        <!--                        </div>-->
+        <!--                    </div>-->
+        <!--                        <div class="leave_graph" t-ref="leave_graph">-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+</t>
+
+    <t t-name="PayrollManagerDashboard">
+<br/>
+        <br/>
+</t>
+        </templates>

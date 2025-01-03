@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_job_form_view">
+            <field name="name">hr.job.form.view</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='recruitment_page']/group" position="before">
+                    <group string="Official Details">
+                        <field name="account_manager"/>
+                        <field name="recruiter_name"/>
+                        <field name="no_of_position"/>
+                    </group>
+                </xpath>
+                <!-- <page name="job_description_page" position="after">
+                    <page string="Job Boards">
+                        <button name="action_open_postjobfree_wizard" type="object" string="Post to PostJobFree"
+                                class="btn-primary"/>
+                    </page>
+                </page> -->
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_job_form_view_status">
+            <field name="name">hr.job.form.view</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="status"/>
+<!--                    <field name="type_ids" widget="radio"/>-->
+                    <field name="work_experience"/>
+<!--                    <field name="skills"/>-->
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_job_form_view_attach">
+            <field name="name">hr.job.form.view</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='interviewer_ids']" position="after">
+                    <field name="attachment_ids" widget="many2many_binary"/>
+                    <field name="rate" widget="star_rating"/>
+                    <field name="target_date"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_job_form_view_address">
+            <field name="name">hr.job.form.view</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='contract_type_id']" position="after">
+                    <field name="city"/>
+                    <field name="country_id"/>
+                    <field name="zip_code"/>
+                    <field name="company_name"/>
+                    <field name="creation_date" readonly="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_job_form" model="ir.ui.view">
+            <field name="name">hr.job.form.inherit</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Assessment">
+                        <group>
+                            <group>
+                                <field name="assign_id" options="{'no_create': False}" placeholder="Select"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_job_form_view_recruiter">
+            <field name="name">hr.job.form.view</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_assignment_tree" model="ir.ui.view">
+            <field name="name">assignment.tree</field>
+            <field name="model">assignment</field>
+            <field name="arch" type="xml">
+                <tree string="Assignments">
+                    <field name="name"/>
+                    <field name="assign_date"/>
+                    <field name="description"/>
+                    <field name="job_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_assignment_form" model="ir.ui.view">
+            <field name="name">assignment.form</field>
+            <field name="model">assignment</field>
+            <field name="arch" type="xml">
+                <form string="Assignment">
+                    <group>
+                        <field name="name"/>
+                        <field name="assign_date"/>
+                        <field name="description"/>
+                        <field name="job_id"/>
+                    </group>
+                    <group>
+                        <field name="attachments_ids" widget="many2many_binary"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_assignments" model="ir.actions.act_window">
+            <field name="name">Assignments</field>
+            <field name="res_model">assignment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_assignment_tree"/>
+        </record>
+
+        <record id="company_name_form" model="ir.ui.view">
+            <field name="name">Company.form</field>
+            <field name="model">company.name</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="company"/>
+                        <field name="position"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="company_name_tree" model="ir.ui.view">
+            <field name="name">Company.tree</field>
+            <field name="model">company.name</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="company"/>
+                    <field name="position"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_company_nam" model="ir.actions.act_window">
+            <field name="name">Company</field>
+            <field name="res_model">company.name</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_recruitment_configuration_company"
+                  name="Company"
+                  parent="hr_recruitment.menu_hr_recruitment_configuration"
+                  action="action_company_nam"
+                  sequence="10"/>
+    </data>
+</odoo>

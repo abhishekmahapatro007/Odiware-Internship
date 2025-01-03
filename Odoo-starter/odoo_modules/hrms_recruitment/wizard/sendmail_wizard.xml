@@ -1,0 +1,19 @@
+<odoo>
+    <record id="view_hr_applicant_mail_wizard_form" model="ir.ui.view">
+        <field name="name">hr.applicant.mail.wizard.form</field>
+        <field name="model">hr.applicant.mail.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Send Mail">
+                <group>
+                    <field name="applicant_id"/>
+                    <field name="choose_template"/>
+                    <field name="template_body"/>
+                </group>
+                <footer>
+                    <button string="Send" type="object" name="send_mail" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

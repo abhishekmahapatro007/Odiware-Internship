@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <menuitem id="customer_menu_root" name="Customer Subscriptions" action="customer_credit_menu_action">
+<!--        <menuitem id="odi_customer_credit_menu_item" action="customer_credit_menu_action"/>-->
+        <menuitem id="odi_api_key_first_level_menu" name="Options">
+            <menuitem id="odi_api_key_menu_item" action="odi_api_key_submenu_action"/>
+            <menuitem id="odi_sub_plan_menu_item" action="odi_sub_plan_submenu_action"/>
+            <menuitem id="odi_service_cost_menu_item" action="odi_service_cost_submenu_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>

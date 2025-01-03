@@ -1,0 +1,22 @@
+<odoo>
+    <record id="postjobfree_jobqueue_wizard_form" model="ir.ui.view">
+        <field name="name">postjobfree.jobqueue.wizard.form</field>
+        <field name="model">postjobfree.jobqueue.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Add to PostJobFree job Queue">
+                <group>
+                    <!-- <field name="job_id"/> -->
+<!--                    <field name="ref_nb"/>-->
+                    <field name="company_name"/>
+                    <field name="job_url"/>
+                    <field name="salary"/>
+                    <field name="description"/>
+                </group>
+                <footer>
+                    <button string="Send" type="object" name="add_to_job_queue" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

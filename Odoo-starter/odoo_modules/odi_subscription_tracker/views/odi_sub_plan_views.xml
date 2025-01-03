@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="odi_sub_plan_submenu_action" model="ir.actions.act_window">
+        <field name="name">Subscription Plans</field>
+        <field name="res_model">odi.sub.plan</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no record of any Subscription Plan at the moment.
+            </p>
+        </field>
+    </record>
+
+    <record id="odi_sub_plan_form_view" model="ir.ui.view">
+        <field name="name">odi.sub.plan.form</field>
+        <field name="model">odi.sub.plan</field>
+        <field name="arch" type="xml">
+            <form string="Subscription Plans">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="plan_advertised_name"/>
+                        <h1>
+                            <field name="plan_advertised_name" placeholder="Enter Plan's Name as Advertised to clients"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="plan_name"/>
+                        </group>
+                        <group>
+                            <field name="credits_recharge"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="odi_sub_plan_tree_view" model="ir.ui.view">
+        <field name="name">odi_subscription_tracker.odi_sub_plan.tree</field>
+        <field name="model">odi.sub.plan</field>
+        <field name="arch" type="xml">
+            <tree string="Subscription Plans">
+                <field name="plan_advertised_name"/>
+                <field name="plan_name"/>
+                <field name="credits_recharge"/>
+            </tree>
+        </field>
+    </record>
+
+<!--    <record id="odi_sub_plan_tree_view_modified" model="ir.ui.view">-->
+<!--        <field name="name">Remove New and Import button</field>-->
+<!--        <field name="model">odi.api.key</field>-->
+<!--        <field name="inherit_id" ref="odi_sub_plan_tree_view"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//tree" position="attributes">-->
+<!--                <attribute name="create">false</attribute>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record id="odi_api_key_search_view" model="ir.ui.view">-->
+<!--        <field name="name">odi_subscription_tracker.odi_api_key.search</field>-->
+<!--        <field name="model">odi_subscription_tracker.odi_api_key</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <search string="API keys">-->
+<!--                <group expand="1" string="Group By">-->
+<!--                    <filter string="Example Field" name="example_field" domain="[]"-->
+<!--                            context="{'group_by':'example_field'}"/>-->
+<!--                </group>-->
+<!--            </search>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <menuitem name="API keys" id="odi_api_key_menu" parent="your_root_menu" action="odi_api_key_act_window"/>-->
+
+
+</odoo>

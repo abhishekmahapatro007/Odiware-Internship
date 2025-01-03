@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem name="Assessment"
+              id="menu_assessment_root"
+              sequence="105"
+              parent="hr_recruitment.menu_hr_recruitment_root"
+              action="survey.action_survey_form"/>
+
+    <menuitem name="Candidates"
+            parent="hr_recruitment.menu_hr_recruitment_root"
+            id="all_candidates_first_lvl_menu"
+            action="hr_applicants_menu_action" />
+</odoo>

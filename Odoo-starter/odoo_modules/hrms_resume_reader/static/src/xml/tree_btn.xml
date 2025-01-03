@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+   <t t-name="parse_btn.ListView.Buttons" t-inherit="web.ListView.Buttons">
+       <xpath expr="//div[hasclass('o_list_buttons')]" position="after">
+           <button type="button" class="btn btn-primary mx-1"  t-on-click="onClickAddFromResume">
+               Add from Resume
+           </button>
+       </xpath>
+   </t>
+</templates>

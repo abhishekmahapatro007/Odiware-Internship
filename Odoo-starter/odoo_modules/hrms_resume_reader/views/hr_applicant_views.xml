@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="hr_applicant_form_view_name">
+            <field name="name">hr.applicant.form.view</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//div[@class='oe_button_box']" position="inside">
+                    <button class="btn-primary" type="object" name="action_on_click_parse_resume"
+                        icon="fa-file-pdf-o" string="Populate from resume"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_applicant_tree_view_name" model="ir.ui.view">
+            <field name="name">hr.applicant.tree.inherit</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hrms_recruitment.hr_applicant_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="js_class">button_in_applicant_tree</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
+

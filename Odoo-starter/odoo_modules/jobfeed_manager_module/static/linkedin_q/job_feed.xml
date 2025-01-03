@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<source>
+  <lastBuildDate>Thu, 11 Sep 2014 19:39:59 GMT</lastBuildDate>
+  <publisherUrl>[https://www.linkedin.com/company/odiware/]https://my.odiware.com</publisherUrl>
+  <publisher>Odiware Technologies</publisher>
+  <expectedJobCount>1</expectedJobCount>
+  <job>
+    <partnerJobId>122</partnerJobId>
+    <company>Odiware Technologies</company>
+    <title>Odoo Developer</title>
+    <description>&lt;p data-last-history-steps=\"1806345893367818\"&gt;Job Title: Odoo Developer&lt;/p&gt;&lt;p&gt;Location: Bhubaneshwar, Odisha, India&lt;/p&gt;&lt;p&gt;Job Type: Full-Time&lt;/p&gt;&lt;p&gt;Experience Level: 2 Years&lt;/p&gt;&lt;p&gt;About Us:&lt;/p&gt;&lt;p&gt;Odiware Technologies is a dynamic and innovative company specializing in development of Odoo and its module to help clients with their CRM problems and help them manage their company better. We are looking for a skilled Odoo Developer to join our team and contribute to the development and enhancement of our Odoo ERP solutions.&lt;/p&gt;&lt;p&gt;Job Summary:&lt;/p&gt;&lt;p&gt;As an Odoo Developer with 2 years of experience, you will be responsible for designing, developing, and implementing Odoo applications and modules. You will work closely with our project managers and clients to understand their requirements and deliver high-quality solutions that meet their business needs.&lt;/p&gt;&lt;p&gt;Key Responsibilities:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Develop, customize, and maintain Odoo modules and applications based on client requirements.&lt;/li&gt;&lt;li&gt;Collaborate with cross-functional teams to gather and analyze business requirements.&lt;/li&gt;&lt;li&gt;Troubleshoot and resolve issues related to Odoo applications and modules.&lt;/li&gt;&lt;li&gt;Perform system integration and data migration tasks.&lt;/li&gt;&lt;li&gt;Write clean, maintainable, and efficient code following best practices.&lt;/li&gt;&lt;li&gt;Conduct testing and debugging of applications to ensure optimal performance.&lt;/li&gt;&lt;li&gt;Provide technical support and training to end-users as needed.&lt;/li&gt;&lt;li&gt;Stay updated with the latest Odoo features and best practices to enhance system functionality.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Qualifications:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Bachelor’s degree in Computer Science, Information Technology, or a related field.&lt;/li&gt;&lt;li&gt;Minimum of 2 years of experience in Odoo development.&lt;/li&gt;&lt;li&gt;Proficiency in Python, XML, and JavaScript.&lt;/li&gt;&lt;li&gt;Experience with PostgreSQL and database management.&lt;/li&gt;&lt;li&gt;Familiarity with Odoo framework and its architecture.&lt;/li&gt;&lt;li&gt;Knowledge of web technologies (HTML, CSS, and JavaScript frameworks).&lt;/li&gt;&lt;li&gt;Strong problem-solving skills and attention to detail.&lt;/li&gt;&lt;li&gt;Excellent communication and teamwork abilities.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Preferred Skills:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Experience with Odoo version 16 or later.&lt;/li&gt;&lt;li&gt;Knowledge of Odoo modules such as Sales, Inventory, Accounting, and CRM.&lt;/li&gt;&lt;li&gt;Familiarity with Agile development methodologies.&lt;/li&gt;&lt;li&gt;Understanding of RESTful APIs and web services.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;What We Offer:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Competitive salary and benefits package.&lt;/li&gt;&lt;li&gt;Opportunities for professional growth and development.&lt;/li&gt;&lt;li&gt;A collaborative and inclusive work environment.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Join us at Odiware Technologies and be a part of our exciting journey in delivering exceptional Odoo solutions to our clients!&lt;/p&gt;
+        </description>
+    <industry>Information Technology and Services</industry>
+    <applyUrl>https://my.odiware.com/jobs/odoo-developer-122</applyUrl>
+    <companyId>14597133</companyId>
+    <location>Bhubaneswar, Odisha, India</location>
+    <city>Bhubaneswar</city>
+    <state>Odisha</state>
+    <country>India</country>
+    <jobFunctions>
+      <jobFunction>eng</jobFunction>
+      <jobFunction>it</jobFunction>
+    </jobFunctions>
+    <experienceLevel>ASSOCIATE</experienceLevel>
+    <jobtype>FULL_TIME</jobtype>
+    <skills>
+      <skill>Python</skill>
+      <skill>Odoo</skill>
+      <skill>Testing and Debugging</skill>
+      <skill>Communication</skill>
+      <skill>RESTful API</skill>
+      <skill>XML</skill>
+      <skill>Javascript</skill>
+      <skill>HTML</skill>
+      <skill>CSS</skill>
+      <skill>Communication</skill>
+      <skill>Teamwork</skill>
+    </skills>
+    <workplaceTypes>On-site</workplaceTypes>
+    <listDate>10/09/2024</listDate>
+    <expirationDate>10/30/2024</expirationDate>
+  </job>
+</source>
