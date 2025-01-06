@@ -1,0 +1,13 @@
+Scope: Track inventory at the central warehouse and multiple construction sites.  
+Scenario: Track material transfers from the central warehouse to a site and 
+consumption during the project.  
+
+Steps:  
+Configure warehouses for the central store and site-specific inventories.  
+
+Set up stock locations within each warehouse (e.g., raw materials, tools, spare parts).  
+
+Test inter-site stock transfers and consumption tracking.  
+
+Enable batch tracking for materials with expiration dates (e.g., cement bags).  
+

@@ -1,0 +1,20 @@
+In manufacturing, subcontracting is the process of a company engaging a third-party
+manufacturer, or subcontractor, to manufacture products that are then sold by the 
+contracting company. Subcontracting provides a variety of benefits for both the 
+contracting company and the subcontractor.
+
+After creating BOM for a product in Manufacturing Module,go to Purchase Module 
+and place a RFQ(Requests For Quotation) and confirm the RFQ.
+
+You can resupply the BoM using the resupply smart button or through Inventory Module.
+(Refer Resupply_SubContractor.png)
+Tip:Reserve Quantity before confirming the Purchase Order and make sure the status 
+is ready in Inventory Module or You can validate by clicking on the "WH/RES/00001"
+and change the quantity
+
+The purpose of the “Resupply Subcontractor on Order” route is to Ship components
+to a subcontractor 
+
+Manufacturing>Reporting>Production Analysis
+
+Manufacturing>Reporting>Overall Equipment Effectiveness

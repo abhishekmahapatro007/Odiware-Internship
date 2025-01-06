@@ -1,0 +1,11 @@
+http://77.37.45.92:8069 is the test server where only registered Users can login
+and http://localhost:8069/ is used to launch Odoo on Personal Machine.
+
+77.37.45.92 is owned by Odiware and can't be accessed without registered credentials
+and it's supposed to test the custom modules developed.
+
+Procurement is the process of sourcing, purchasing, receiving, and inspecting 
+all of the goods and services your business needs to operate – everything from 
+raw manufacturing materials to software to office supplies. 
+
+Go to Apps and Activate the required Module.
