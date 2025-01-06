@@ -1,6 +1,4 @@
-Drop-shipping is a system that allows orders taken from your store to be shipped 
-straight from your supplier to your customer. There are many advantages to this 
-system. First, the items are delivered much faster, as any intermediate is cut 
+Drop-shipping is a system that allows orders taken from your store to be shipped straight from your supplier to your customer. There are many advantages to this system. First, the items are delivered much faster, as any intermediate is cut 
 out.
 (1 step)
 
