@@ -9,3 +9,6 @@ Week 3:-Completed Purchase Module,made yt promotions vid and started Inventory M
 Week 4:-Completed Inventory Module and some additional Sales Module operations(included in Inventory Module)
 
 Week 5:-Started MRP-Manufacturing & Shop Floor Module
+
+Week 6:-Completed MRP-Manufacturing & Shop Floor Module and Got assigned a Project related to ERP system for Construction 
+site.(BuildMax Constructions)

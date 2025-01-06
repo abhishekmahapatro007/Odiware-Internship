@@ -1,0 +1,57 @@
+Drop-shipping is a system that allows orders taken from your store to be shipped straight from your supplier to your customer. There are many advantages to this system. First, the items are delivered much faster, as any intermediate is cut 
+out.
+(1 step)
+
+1. Activate Dropshipping Feature in Odoo
+Go to Settings > General Settings.
+Under the Inventory section, find the Dropshipping option.
+Check the box for Enable Dropshipping.
+Save the changes.
+This allows you to use dropshipping for your orders.
+
+2. Configure Products for Dropshipping
+Once dropshipping is enabled, you can configure individual products to be dropshipped:
+
+Go to Inventory > Products > Products.
+Open or create a product that you want to dropship.
+In the product form, under the Inventory tab, look for the Procurement section.
+Set the Route to Dropshipping. This tells Odoo that the product should be dropshipped from the supplier directly to the customer.
+3. Set Up Vendor and Supplier Information
+For dropshipping, you need to have a supplier defined for the product:
+
+Go to Inventory > Products > Suppliers.
+Make sure you create a vendor or supplier for each product that will be dropshipped.
+You’ll also need to add the Vendor to the product under the Suppliers tab in the product form.
+Ensure that the supplier has proper lead times, pricing, and other necessary details.
+
+4. Enable Routes (Optional but Recommended)
+Routes help define the logistics flow in Odoo. To ensure your products are processed with the right flow, you may want to set up and customize routes:
+
+Go to Inventory > Configuration > Routes.
+Ensure that Dropshipping is activated as a route, and that the corresponding procurement rules are set.
+5. Create Dropshipping Purchase Orders
+When you receive an order from your customer, you can create a purchase order directly linked to the sales order:
+
+When a sales order is confirmed and has products that are dropshipping, Odoo will automatically create a purchase order for the supplier with the Dropshipping route.
+The Purchase Order will be linked to the sales order, ensuring that the product gets shipped directly from the supplier to your customer.
+6. Verify Stock Locations
+Ensure that your stock locations are set up to reflect the dropshipping process. You'll typically have a "Dropshipping" location or a virtual location set up to reflect that the item doesn't physically come to your warehouse.
+
+Go to Inventory > Configuration > Locations.
+If needed, create or verify the virtual dropshipping location.
+7. Manage Invoices and Payments
+You should make sure the invoicing process for dropshipping works smoothly:
+
+When the supplier ships the product, Odoo can automatically generate an invoice based on the purchase order.
+You can configure the invoicing policy in Inventory > Configuration > Settings.
+Summary of Key Steps:
+Enable dropshipping in Settings.
+Set products to use Dropshipping route.
+Define suppliers for each product.
+Use purchase orders with Dropshipping route for supplier fulfillment.
+Ensure proper stock locations and logistics are set up.
+Manage invoicing and payment according to dropshipping flow.
+By following these steps, Odoo will handle the dropshipping process smoothly, ensuring that orders are routed directly to the supplier for fulfillment and that your business can focus on managing sales and customer service.
+
+
+
