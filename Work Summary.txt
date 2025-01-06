@@ -10,4 +10,4 @@ Week 4:-Completed Inventory Module and some additional Sales Module operations(i
 
 Week 5:-Started MRP-Manufacturing & Shop Floor Module
 
-Week 6:-
+Week 6:-Completed MRP-Manufacturing & Shop Floor Module
