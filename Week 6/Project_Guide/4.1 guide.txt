@@ -10,7 +10,7 @@ Tasks:
 -->
 
 3)Create dashboards for site managers to monitor KPIs.  
--->
+-->Dashboards Module > Configuration > Dashboards > New
 
 Scenario: Generate a report showing material usage for each site.
  
