@@ -2,21 +2,21 @@ Go to Sales Module>Products>Create desired products for construction
 
 Steps:  
 1) Set up vendor profiles and price lists.  
--->Go to purchase Module>Configure>Vendor pricelists
+-->Go to purchase Module > Configure > Vendor pricelists
 
 2) Configure RFQs and purchase orders (POs) based on project needs.
--->Purchase Module>Orders>Create RFQs and POs for the products  
+-->Purchase Module > Orders > Create RFQs and POs for the products  
 
 3) Implement approval workflows for large purchases.  
--->Purchase>Settings>Orders,Purchase Order Approval,check the box and set
+-->Purchase > Settings > Orders,Purchase Order Approval,check the box and set
 amount above which approval is required
 (Marc Demo can create PO, Mitchel Admin can approve)
 General Settings > Users > Manage Users > Change Access Rights of Users
 (Need to Check)
 
 4) Test automatic reordering rules based on inventory levels at sites.
-Problem:Reordering rules can't find for products I've created.
-Solution:Make sure the product is storable in order to create Reordering rules for that particular product.
+Problem: Reordering rules can't find for products I've created.
+Solution: Make sure the product is storable in order to create Reordering rules for that particular product.
 
 Tips:-
 You need to configure the product price in Purchase>Configuration>Vendor Pricelists
