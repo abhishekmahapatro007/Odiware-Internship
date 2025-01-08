@@ -13,10 +13,12 @@ Steps:
 --> Define if the location is internal, supplier (for incoming goods), or customer (for outgoing goods).
 
 3)Test inter-site stock transfers and consumption tracking.  
-
+--> Choose the source warehouse (e.g., Central Warehouse) and destination warehouse (e.g., Site 1 Warehouse).
+--> Add the materials to be transferred. This could be cement, steel, tools, etc.
+--> Confirm and validate the transfer. Once confirmed, the stock quantities will be updated in the destination warehouse.
 
 4)Enable batch tracking for materials with expiration dates (e.g., cement bags).  
 --> Enable Lot/Serial Numbers and Expiration Tracking(Make sure to check if the product is storable or not)
 --> Check the Expiration date checkbox in the inventory tab of the product form and set the expiration date/best before.
 
-
+(Refer README.md for more detailed step-by-step procedure)
