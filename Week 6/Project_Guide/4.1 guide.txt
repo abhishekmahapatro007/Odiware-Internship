@@ -1,0 +1,16 @@
+4.1 Multi-Site Operations 
+
+Scope: Enable seamless management of multiple construction sites.  
+
+Tasks:  
+1)Customize inventory reports to show site-wise material consumption.  
+-->
+
+2)Implement site-specific budgeting and cost tracking.  
+-->
+
+3)Create dashboards for site managers to monitor KPIs.  
+-->
+
+4)Scenario: Generate a report showing material usage for each site.
+-->  
