@@ -16,6 +16,6 @@ Set up budgets and link them to tasks for cost tracking.
 
 
 Enable Gantt charts and timelines for visual project tracking.  
-
+--> Refer Gaant_Chart_Demo.png for better idea.
 
 Scenario: Create a sample project for constructing a highway, including tasks like site preparation, material procurement, and construction phases.  
