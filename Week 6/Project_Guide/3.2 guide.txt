@@ -8,11 +8,9 @@ Steps:
 -->Purchase Module > Orders > Create RFQs and POs for the products  
 
 3) Implement approval workflows for large purchases.  
--->Purchase > Settings > Orders,Purchase Order Approval,check the box and set
-amount above which approval is required
+-->Purchase > Settings > Orders,Purchase Order Approval,check the box and set amount above which approval is required
 (Marc Demo can create PO, Mitchel Admin can approve)
-General Settings > Users > Manage Users > Change Access Rights of Users
-(Need to Check)
+General Settings > Users > Manage Users > Change Access Rights of Users(Need to Check)
 
 4) Test automatic reordering rules based on inventory levels at sites.
 Problem: Reordering rules can't find for products I've created.
