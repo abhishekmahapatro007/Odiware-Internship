@@ -10,6 +10,7 @@ anything
 Define tasks, subtasks, and milestones.  
 --> Create different stages(tasks)
 --> Create the subtasks that should be conducted inside that particular Stage/task
+--> Go to project module homepage and click the 3 buttons and create milestones from there.
 
 Set up budgets and link them to tasks for cost tracking.  
 
