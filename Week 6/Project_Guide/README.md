@@ -370,6 +370,7 @@ Following these steps will enable you to seamlessly manage multiple construction
 
 .
 --
+## 4.2 Project-Specific Procurement 
 Here is a detailed, step-by-step guide to customize procurement for projects in Odoo, focusing on the three main tasks: customizing Purchase Orders (POs), automating cost allocation, and testing workflows for project-specific vendor contracts.
 
 ### **Step 1: Customize Purchase Orders (POs) to include project references**
