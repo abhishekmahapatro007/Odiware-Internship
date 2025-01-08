@@ -1,0 +1,14 @@
+4.2 Project-Specific Procurement 
+
+Scope: Link procurement to specific projects.  
+
+Tasks:  
+1)Customize POs to include project references.  
+-->
+
+2)Automate cost allocation to project budgets.  
+-->
+
+3)Test workflows for project-specific vendor contracts.  
+-->
+ 
