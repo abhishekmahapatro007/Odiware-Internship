@@ -111,3 +111,5 @@ For materials like **cement** that have **expiration dates**, Odoo provides a fe
 ### Conclusion:
 
 By following the above steps, you can set up Odoo for **inventory management** at the **central warehouse** and **construction sites**, ensuring accurate tracking of material **transfers**, **consumption**, and **expiration dates**. With proper setup, you will streamline operations, reduce errors, and improve project material management.
+--
+
