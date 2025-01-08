@@ -3,18 +3,18 @@ Scenario: Track material transfers from the central warehouse to a site and
 consumption during the project.  
 
 Steps:  
-Configure warehouses for the central store and site-specific inventories.  
+1)Configure warehouses for the central store and site-specific inventories.  
 -->Inventory > Configuration > Warehouses and create different warehouses and configure them according to your needs.
 
-Set up stock locations within each warehouse (e.g., raw materials, tools, spare parts).  
+2)Set up stock locations within each warehouse (e.g., raw materials, tools, spare parts).  
 -->Inventory > Configuration > Locations and sssign each location a name based on the type of materials you plan to store (e.g., 
 --> Raw Materials, Tools, Spare Parts, etc.)
 --> For each location, select the parent warehouse (Central Warehouse or any Site Warehouse).
 --> Define if the location is internal, supplier (for incoming goods), or customer (for outgoing goods).
 
-Test inter-site stock transfers and consumption tracking.  
+3)Test inter-site stock transfers and consumption tracking.  
 --> Enable Lot/Serial Numbers and Expiration Tracking(Make sure to check if the product is storable or not)
 --> Check the Expiration date checkbox in the inventory tab of the product form and set the expiration date/best before.
 
-Enable batch tracking for materials with expiration dates (e.g., cement bags).  
+4)Enable batch tracking for materials with expiration dates (e.g., cement bags).  
 
