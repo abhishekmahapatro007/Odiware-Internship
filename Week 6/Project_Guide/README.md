@@ -1,4 +1,4 @@
-##3.3 Inventory Management
+## 3.3 Inventory Management
 To effectively manage **inventory** across a **central warehouse** and **multiple construction sites** in **Odoo**, you need to set up your system to track **materials**, 
 **transfers**, and **consumption**. The key tasks involve configuring warehouses, stock locations, inter-site stock transfers, consumption tracking, and batch tracking for 
 materials. Here’s a step-by-step guide on how to set this up in Odoo.
