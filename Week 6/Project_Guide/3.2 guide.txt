@@ -11,7 +11,7 @@ Steps:
 -->Purchase>Settings>Orders,Purchase Order Approval,check the box and set
 amount above which approval is required
 (Marc Demo can create PO, Mitchel Admin can approve)
-General Settings>Users>Manage Users>Change Access Rights of Users
+General Settings > Users > Manage Users > Change Access Rights of Users
 (Need to Check)
 
 4) Test automatic reordering rules based on inventory levels at sites.
