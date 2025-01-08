@@ -4,8 +4,8 @@ Scope: Plan, track, and manage construction projects.
 
 Steps:  
 Configure the Project module to create and track projects(e.g. highways,bridges).  
--->Head to the Apps Module and Activate the Project Module and create a new project
-named "Highway Construction Project" or anything
+-->Head to the Apps Module and Activate the Project Module and create a new project named "Highway Construction Project" or 
+anything
 
 Define tasks, subtasks, and milestones.  
 --> Create different stages(tasks)
