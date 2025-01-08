@@ -13,7 +13,8 @@ Define tasks, subtasks, and milestones.
 --> Go to project module homepage and click the 3 buttons and create milestones from there.
 
 Set up budgets and link them to tasks for cost tracking.  
-
+--> You can't do this on Community version,since you need Accounting Module(Enterprise) and check the Analytic Accounting
+to conduct this step.
 
 Enable Gantt charts and timelines for visual project tracking.  
 --> Refer Gaant_Chart_Demo.png for better idea.
