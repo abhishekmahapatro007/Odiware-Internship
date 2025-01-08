@@ -1,0 +1,20 @@
+3.1 Project Management 
+
+Scope: Plan, track, and manage construction projects.  
+
+Steps:  
+Configure the Project module to create and track projects(e.g. highways,bridges).  
+-->Head to the Apps Module and Activate the Project Module and create a new project
+named "Highway Construction Project" or anything
+
+Define tasks, subtasks, and milestones.  
+--> Create different stages(tasks)
+--> Create the subtasks that should be conducted inside that particular Stage/task
+
+Set up budgets and link them to tasks for cost tracking.  
+
+
+Enable Gantt charts and timelines for visual project tracking.  
+
+
+Scenario: Create a sample project for constructing a highway, including tasks like site preparation, material procurement, and construction phases.  
