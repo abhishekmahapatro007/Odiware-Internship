@@ -49,6 +49,9 @@ You need to ensure that materials can be transferred between warehouses and trac
 
 #### Step 1: Set Up Inter-Site Stock Transfers
    - **Step 1**: Go to **Inventory** > **Operations** > **Transfers**.
+      - Receipts when you are receiving products into inventory.
+      - Deliver the products to customers, go to Inventory > Operations > Deliveries.
+      - If you are moving products between internal locations (e.g., warehouse to store), go to Inventory > Operations > Internal Transfers.
    - **Step 2**: Click on **Create** to initiate a new transfer.
    - **Step 3**: Choose the **source warehouse** (e.g., Central Warehouse) and **destination warehouse** (e.g., Site 1 Warehouse).
    - **Step 4**: Add the materials to be transferred. This could be cement, steel, tools, etc.
