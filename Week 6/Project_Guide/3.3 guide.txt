@@ -13,8 +13,10 @@ Steps:
 --> Define if the location is internal, supplier (for incoming goods), or customer (for outgoing goods).
 
 3)Test inter-site stock transfers and consumption tracking.  
+
+
+4)Enable batch tracking for materials with expiration dates (e.g., cement bags).  
 --> Enable Lot/Serial Numbers and Expiration Tracking(Make sure to check if the product is storable or not)
 --> Check the Expiration date checkbox in the inventory tab of the product form and set the expiration date/best before.
 
-4)Enable batch tracking for materials with expiration dates (e.g., cement bags).  
 
