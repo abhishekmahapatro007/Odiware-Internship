@@ -367,3 +367,133 @@ You can set up automated email reports in Odoo for regular material usage update
 6. **Automate Reports** to be sent to managers on a regular basis.
 
 Following these steps will enable you to seamlessly manage multiple construction sites, track material usage, and produce detailed reports in **Odoo**.
+
+.
+--
+Here is a detailed, step-by-step guide to customize procurement for projects in Odoo, focusing on the three main tasks: customizing Purchase Orders (POs), automating cost allocation, and testing workflows for project-specific vendor contracts.
+
+### **Step 1: Customize Purchase Orders (POs) to include project references**
+
+#### 1.1 **Create a custom field to link PO to a project**
+
+1. **Navigate to the Odoo Studio app**:
+   - If you have Odoo Studio enabled, open the **Studio** app from the main dashboard.
+
+2. **Open the Purchase Orders form**:
+   - Go to the **Purchases** module.
+   - Select any existing **Purchase Order** or create a new one.
+   - Click on the **Studio** icon (pencil icon) in the top right corner.
+
+3. **Add a custom field for the project**:
+   - In the form editor, drag and drop a **Many2one** field onto the form.
+   - Set the **related model** for this field to **Project** (`project.project`).
+   - Rename the field to something like **Project Reference**.
+
+4. **Save the changes**:
+   - Click **Save** to apply the changes and exit Studio.
+
+5. **Verify the changes**:
+   - Open a Purchase Order and check if the **Project Reference** field appears and can be linked to a project.
+
+#### 1.2 **Manually Link PO to Project**
+- Now, when creating or editing a Purchase Order, you'll see the **Project Reference** field.
+- Select the appropriate project from the dropdown list when creating a new PO.
+
+---
+
+### **Step 2: Automate cost allocation to project budgets**
+
+#### 2.1 **Set up the Project Budget feature**
+
+1. **Enable the Project Budget feature**:
+   - Go to the **Project** module.
+   - Click on **Configuration** > **Settings**.
+   - Under the **Project Management** section, ensure that **Project Budgets** is enabled.
+
+2. **Create a project and assign a budget**:
+   - Go to **Projects** > **All Projects**.
+   - Click **Create** and add a new project.
+   - Under the **Budget** tab, set a **budget** for the project, specifying the amount allocated for each type of expense (like procurement).
+
+#### 2.2 **Configure Purchase Order lines to allocate costs to projects**
+
+1. **Modify the PO line items**:
+   - When creating a **Purchase Order**, each item in the order should be associated with a specific project.
+   - Add a **Custom Field** on the PO line, linking each item to a **project**. This is done through Studio or custom development.
+   - In the **Purchase Order Line** model, you can add a `Many2one` field to link the line item to the **project**.
+
+2. **Create a custom field in the PO line**:
+   - Go to **Studio**, open the **Purchase Order** form.
+   - Add a **Many2one** field to the PO line and link it to the **Project** model.
+   - Rename this field something like **Project (on PO Line)**.
+   
+3. **Configure the cost allocation**:
+   - After confirming the PO, you can use **Automated Actions** or custom Python code to create journal entries that allocate costs to the corresponding **project's budget**.
+   - For example, when a PO is confirmed, use an action to create a **journal entry** that reduces the available project budget.
+
+#### 2.3 **Set up automated journal entries (optional)**
+
+1. **Go to Accounting > Configuration > Automated Actions**:
+   - Create an automated action that runs when a Purchase Order is confirmed.
+   - Set up a rule to create a journal entry allocating the cost to the project’s budget. This can be done using custom Python code or by configuring an existing action in the **Accounting** module.
+
+---
+
+### **Step 3: Test workflows for project-specific vendor contracts**
+
+#### 3.1 **Set up Project-specific Vendor Contracts**
+
+1. **Create Vendor Contracts**:
+   - Go to the **Purchase** module.
+   - Click **Contracts** and create a new **Vendor Contract**.
+   - In the contract form, add the **Project Reference** (custom field added in Step 1) to link the contract to the specific project.
+
+2. **Configure the workflow**:
+   - Go to **Settings > Workflow** in the **Purchase** module.
+   - Define the steps and approvals required for vendor contracts.
+     - For instance, you could have:
+       - **Request for Proposal (RFP)**.
+       - **Contract Review**.
+       - **Purchase Order Confirmation**.
+
+3. **Define approval rules based on project**:
+   - Add rules to ensure that a vendor contract’s status is approved based on project requirements.
+   - You can create stages within the project itself to link specific vendor contract stages (e.g., Contract in Progress, PO Confirmed, Delivery).
+
+#### 3.2 **Test Workflow**
+
+1. **Create a sample Vendor Contract**:
+   - Create a contract and associate it with a project.
+   
+2. **Run through the workflow**:
+   - Start with the **Request for Proposal** stage, moving the contract through stages such as **Approval** or **Negotiation**.
+   - Ensure that the project link remains intact and that any updates to the contract are visible in the project.
+
+3. **Verify the PO integration**:
+   - Ensure that when the **Vendor Contract** is approved, the associated **Purchase Order** is created automatically and correctly linked to the project.
+   - When the PO is confirmed, check that the project’s budget is updated accordingly (as configured in Step 2).
+
+#### 3.3 **Review Vendor Payments**
+- **Vendor payments** should also be tied to project costs. Configure **Payment Terms** in the vendor contract to ensure that payments are linked to specific stages or milestones within the project.
+- Set up **Journal Entries** that allocate the payments to the project’s budget when invoices are paid.
+
+---
+
+### **Step 4: Validate and Test Everything**
+
+#### 4.1 **Test end-to-end process**
+
+1. **Create a new project** and set up its budget.
+2. **Create a new Purchase Order** and link it to the project.
+3. **Create a Vendor Contract** and ensure it's linked to the project.
+4. Confirm the **Purchase Order**, and check if costs are automatically allocated to the project budget.
+5. **Confirm that journal entries** are created automatically, updating the project budget.
+6. **Ensure the approval workflows** for the vendor contract work as expected and that project managers are notified appropriately.
+
+#### 4.2 **Test Reporting**
+
+- Go to the **Project** module and generate **Project Cost Reports** to ensure that the costs from procurement (POs, Vendor Contracts, etc.) are accurately reflected in the reports.
+  
+---
+
+By following these steps, you’ll have a fully customized procurement workflow in Odoo, where procurement actions are directly linked to specific projects, ensuring smooth cost allocation, budget management, and workflow integration.
