@@ -1,5 +1,3 @@
-I see! Below is a **step-by-step guide** on how to generate a report showing material usage for each construction site in Odoo, without involving code.
-
 ---
 
 ### Step-by-Step Process to Track Material Usage by Site in Odoo
