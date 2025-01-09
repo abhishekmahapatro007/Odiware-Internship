@@ -261,113 +261,79 @@ By following the above steps, you can set up Odoo for **inventory management** a
 --
 ## 4.1 Multi-Site Operations  
 
-### Step 1: **Set Up Sites in Odoo (Construction Projects)**
-Before you can track material usage by site, you need to ensure that Odoo is set up to manage multiple construction sites.
+To generate a report showing material usage for each construction site in Odoo, you will need to customize the inventory and reporting functionalities. Here's a step-by-step approach to achieve this:
 
-#### **A. Create Sites as Projects**
-1. Go to **Projects** (from the Odoo Dashboard).
-2. Create a new project for each construction site. 
-   - **Go to**: `Project` > `Projects`
-   - **Create**: Add a new project for each site (e.g., "Site A", "Site B").
-   - This helps in categorizing materials used for each site.
+### 1. **Enable Multi-Site Management**
+Ensure you have activated multi-site management in Odoo. This allows you to manage inventory for different construction sites.
 
-#### **B. Set Up Inventory for Each Site**
-- **Inventory Locations**: You can set up different inventory locations in Odoo that represent each construction site. 
-  - **Go to**: `Inventory` > `Configuration` > `Locations`
-  - Create a location for each site (e.g., "Site A Warehouse", "Site B Warehouse").
-  - These locations can help you track where materials are stored and consumed on a per-site basis.
+- Go to **Settings** > **General Settings**.
+- Under the **Inventory** section, enable **Multi-Warehouses**.
+- Set up a **Warehouse** for each construction site (each site will have its own warehouse).
 
-### Step 2: **Ensure Material Movements are Tagged with Projects/Sites**
-For accurate material tracking, each material movement (receipt, usage, etc.) must be tagged with the corresponding site.
+### 2. **Define Sites and Link Them to Warehouses**
+Each construction site should be associated with its own warehouse so that inventory can be tracked on a site-by-site basis.
 
-#### **A. Linking Materials to Projects**
-1. **When issuing materials** (e.g., using materials on a project), ensure you select the relevant **Project** and **Warehouse/Location** during the material transfer process. 
-2. You can assign a project to the material by linking it to the **Project** field when creating the material move.
-   - **Go to**: `Inventory` > `Operations` > `Transfers`
-   - When creating a transfer, link the transfer to the project (site).
+- Go to **Inventory** > **Configuration** > **Warehouses**.
+- Create a new warehouse for each construction site, specifying the warehouse name (e.g., "Site 1", "Site 2", etc.).
+- You may also create a **Location** for each specific zone in the warehouse if needed (e.g., storage areas for different types of materials).
 
-### Step 3: **Track Material Usage**
-Use Odoo’s **Inventory** and **Project Management** modules to track materials used at each site.
+### 3. **Customizing Inventory Reports**
+Now, customize the reports to show material usage by site. Odoo provides flexible reporting tools, including the **Inventory Valuation Report** and **Product Movement Report**, but we will customize these to track material usage by site.
 
-#### **A. Record Material Consumption**
-- **Go to**: `Inventory` > `Operations` > `Delivery Orders` (for material issued from stock)
-  - Ensure that the delivery order is associated with the appropriate site (project).
-  - Materials consumed at each site should be logged in Odoo’s inventory system.
+#### Option 1: Use Odoo's Existing Inventory Reports with Custom Filters
 
-#### **B. Recording Material Costs**
-When material is issued or consumed, Odoo automatically calculates the **Cost of Goods Sold (COGS)** based on the cost of the material. Ensure that the **Product Cost** is configured correctly in Odoo for accurate reporting.
+- Go to **Inventory** > **Reporting**.
+- Use the **Product Moves** or **Inventory Valuation** report.
+- You can filter by **Warehouse** to isolate material usage for specific sites. This will show the amount of material consumed at each site.
 
-### Step 4: **Create Custom Reports for Material Usage by Site**
-Odoo allows you to customize reports to show material usage per site by creating a custom **Inventory Report** or using **Odoo Studio** to generate more detailed reports.
+#### Option 2: Customize the Reports (if default reports don’t suffice)
 
-#### **A. Use Odoo’s Built-in Reporting**
-Odoo has built-in inventory reports that you can filter by location and product type. Here’s how to use them:
+- If the built-in reports don’t meet your needs, you can create a custom report using Odoo Studio or the developer tools.
 
-1. **Go to**: `Inventory` > `Reporting` > `Product Moves`
-2. Filter by:
-   - **Location**: Choose the specific site’s location.
-   - **Product Category**: If you want specific material types (e.g., Cement, Steel).
-   - **Date Range**: Select the period you want to track material consumption for.
+    - **Using Odoo Studio**: Go to **Settings** > **Studio**. 
+    - Choose **Reports** > **Create a new report**.
+    - Customize it to include:
+      - **Warehouse**: Show material consumption per site.
+      - **Material**: List of materials consumed.
+      - **Quantity**: Total quantities of materials used.
+      - **Date Range**: Filter material usage over a specific time period.
+  
+    - Use the custom report builder to group materials by warehouse (construction site) and display consumption data.
 
-#### **B. Customize Inventory Reports** (Optional)
-If you need to create more detailed or specific reports, you can use **Odoo Studio** (or custom development) to add fields and filters.
+### 4. **Site-Specific Budgeting and Cost Tracking**
+To track costs and budget by site, create a cost center or a project for each site and link them to material consumption.
 
-1. **Go to**: `Inventory` > `Reporting` > `Product Moves`
-2. Add custom filters:
-   - **Site Name/ID**: Filter based on the project or site ID.
-   - **Material Type**: Add the material types (e.g., Cement, Steel).
-   - **Quantity and Cost**: Show material usage and costs.
-3. You can also create a **Custom Report** with **Odoo Studio** by:
-   - **Go to**: `Odoo Studio` > `Reports`
-   - Create a custom report layout with **Site**, **Material**, **Quantity**, and **Total Cost**.
+- Create a **Project** for each site in **Project Management**.
+- Link each project to the corresponding **Warehouse** in **Inventory**.
+- Add the materials consumed to each project's **Bill of Materials (BoM)** or **Purchase Orders**.
+- Use Odoo's **Accounting** module to track and report costs for each project.
+  
+### 5. **Create Dashboards for Site Managers**
+You can create a **custom dashboard** that shows the key performance indicators (KPIs) for each site. This can be done using Odoo's **Dashboard** feature or by customizing it via **Odoo Studio**.
 
-#### **Example Report Format**:
-| Site Name | Material Type | Quantity Consumed | Unit Cost | Total Cost | Date       |
-|-----------|---------------|--------------------|-----------|------------|------------|
-| Site A    | Cement        | 500 bags           | $5        | $2,500     | Jan 2025   |
-| Site A    | Steel         | 200 tons           | $40       | $8,000     | Jan 2025   |
-| Site B    | Cement        | 300 bags           | $5        | $1,500     | Jan 2025   |
-| Site B    | Steel         | 150 tons           | $40       | $6,000     | Jan 2025   |
+- Go to **Dashboard**.
+- Add widgets for key metrics such as:
+  - Material consumption per site (Warehouse).
+  - Budget vs. actual costs for each site.
+  - Inventory levels and movements.
+  - Pending purchase orders for materials.
+  
+You can create these widgets by grouping data by warehouse, project, and material to give a comprehensive view for site managers.
 
-#### **C. Use Odoo’s Pivot View**:
-1. **Go to**: `Inventory` > `Reporting` > `Product Moves`
-2. Click on **Pivot View** to switch to a pivot-style report.
-3. Drag and drop fields like **Product**, **Quantity** (used), **Cost**, and **Location** (Site) into the pivot table.
-4. This will create a summary table showing the total material consumed per site, per product.
+### 6. **Example of Material Usage Report**
+Here's how you might structure a report for material usage by site:
 
-### Step 5: **Create Dashboards for Site Managers**
-For real-time tracking, create a dashboard for site managers to view key performance indicators (KPIs), such as material usage and cost.
+| Site Name   | Material Name | Quantity Consumed | Cost of Material | Date       |
+|-------------|---------------|-------------------|------------------|------------|
+| Site 1      | Concrete      | 500 bags          | $5000            | 01/09/2025 |
+| Site 1      | Steel         | 100 tons          | $15000           | 01/09/2025 |
+| Site 2      | Concrete      | 300 bags          | $3000            | 01/09/2025 |
+| Site 2      | Steel         | 50 tons           | $7500            | 01/09/2025 |
 
-#### **A. Odoo Dashboard Configuration**
-1. **Go to**: `Dashboard` > `Create a New Dashboard`
-2. Add widgets that track:
-   - **Material Consumption**: Use a bar or line chart to show how much material has been consumed per site over time.
-   - **Cost Tracking**: Add a widget that shows the total cost of materials used per site.
-   - **Inventory Status**: Show the status of materials in stock vs. consumed.
+This is just an example. You can include other details like purchase order references or project-related details in the report as needed.
 
-#### **B. Use Odoo Studio (Optional)**
-For more advanced customization, use **Odoo Studio** to add custom fields, reports, and widgets specific to each site.
-
----
-
-### Step 6: **Automate Reports and Notifications (Optional)**
-You can set up automated email reports in Odoo for regular material usage updates:
-
-1. **Go to**: `Settings` > `Automated Actions`
-2. Set up an automated action to send a report every week or month to the site managers, summarizing material usage.
-
----
-
-### Summary of Steps for Odoo:
-1. **Create Projects for Each Site** (under Project Management).
-2. **Set Up Inventory Locations for Each Site** (under Inventory).
-3. **Ensure Material Consumption is Tagged by Site** (when issuing materials).
-4. **Generate Reports** using **Odoo’s Product Moves Report** or **Custom Reports** (via Odoo Studio).
-5. **Create Dashboards** to visualize material usage and costs for each site.
-6. **Automate Reports** to be sent to managers on a regular basis.
-
-Following these steps will enable you to seamlessly manage multiple construction sites, track material usage, and produce detailed reports in **Odoo**.
-
+### Final Thoughts
+By using Odoo’s multi-site management and customizing reports through Studio or default reporting tools, you can easily track material usage for each construction site. Additionally, Odoo’s budget and cost tracking features help site managers control and optimize site expenses. Custom dashboards ensure that KPIs are easily accessible in real time.
 .
 --
 ## 4.2 Project-Specific Procurement 
