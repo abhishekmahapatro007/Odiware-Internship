@@ -1,0 +1,14 @@
+You can have one email alias per each project
+
+Configuring an email template on a Kanban stage means that an email based on the template will be sent to the customer as soon as a task is moved 
+into this stage
+
+Tasks created from a website form are created in the project that was selected when configuring the project form in the website editor
+
+You can set gifs as cover image.
+
+Project name,assignees and task title can be created without entering the task form
+
+when you set a high priority to a task (star-shaped icon) and reload the task is moved to the top of the stage after the other prioritized tasks.
+
+In order to link a Saler Order with project,the product type in Sales Order should be Service.(Refer SO_Links_Project.png)
