@@ -7,7 +7,7 @@ Tasks:
 -->Create Sites(Projects > New) and create locations for the site(Inventory > Configuration > Location)
 
 2)Implement site-specific budgeting and cost tracking.  
--->
+-->Create a budget and break it into steps or products.Create BoM in Manufacturing Module(Refer BoM_BuildMax.png)
 
 3)Create dashboards for site managers to monitor KPIs.  
 -->Dashboards Module > Configuration > Dashboards > New
